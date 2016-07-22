@@ -1,0 +1,11 @@
+﻿Build started 2016/7/20 12:53:37.
+     1>Project "I:\WorkSpace\Shaders\BumpMapping\BumpMapping.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         I:\Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>i:\workspace\shaders\bumpmapping\source.cpp(1): fatal error C1083: Cannot open include file: 'osgLib.h': No such file or directory
+     1>Done Building Project "I:\WorkSpace\Shaders\BumpMapping\BumpMapping.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.49

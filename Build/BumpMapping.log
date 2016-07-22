@@ -1,0 +1,14 @@
+﻿Build started 2016/7/22 14:22:51.
+     1>Project "I:\WorkSpace\Shaders\BumpMapping\BumpMapping.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (I:\WorkSpace\Shaders\Build\) contains files shared from another project (BlinnPhong.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(BumpMapping) does not match the Linker's OutputFile property value (BumpMappingd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>Link:
+         I:\Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\WorkSpace\Shaders\Build\BumpMappingd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\WorkSpace\Shaders\Build\BumpMapping.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\WorkSpace\Shaders\Build\BumpMapping.lib" /MACHINE:X86 I:\WorkSpace\Shaders\Build\Source.obj
+     1>MSVCRTD.lib(crtexew.obj) : error LNK2019: unresolved external symbol _WinMain@16 referenced in function ___tmainCRTStartup
+     1>I:\WorkSpace\Shaders\Build\BumpMappingd.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "I:\WorkSpace\Shaders\BumpMapping\BumpMapping.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.17

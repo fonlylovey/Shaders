@@ -1,24 +1,21 @@
-﻿生成启动时间为 2016/7/18 18:42:33。
-     1>项目“E:\WorkProjects\Shaders\ShadowMapping\ShadowMapping.vcxproj”在节点 3 上(Rebuild 个目标)。
+﻿Build started 2016/7/22 17:44:36.
+     1>Project "I:\WorkSpace\Shaders\ShadowMapping\ShadowMapping.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeometryFloor.cpp Source.cpp UniformHandler.cpp
-         UniformHandler.cpp
+         I:\Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-         GeometryFloor.cpp
-         正在生成代码...
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1187,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1188,5): warning MSB8012: TargetName(ShadowMapping) does not match the Linker's OutputFile property value (ShadowMappingd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(ShadowMapping) does not match the Linker's OutputFile property value (ShadowMappingd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
        Link:
-         E:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\WorkProjects\Shaders\Build\ShadowMappingd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\WorkProjects\Shaders\Build\ShadowMapping.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\WorkProjects\Shaders\Build\ShadowMapping.lib" /MACHINE:X86 Debug\GeometryFloor.obj
+         I:\Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\WorkSpace\Shaders\Build\ShadowMappingd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\WorkSpace\Shaders\Build\ShadowMapping.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\WorkSpace\Shaders\Build\ShadowMapping.lib" /MACHINE:X86 Debug\GeometryFloor.obj
          Debug\Source.obj
          Debug\UniformHandler.obj
-         ShadowMapping.vcxproj -> E:\WorkProjects\Shaders\Build\ShadowMappingd.exe
+         ShadowMapping.vcxproj -> I:\WorkSpace\Shaders\Build\ShadowMappingd.exe
        PostBuildEvent:
-         copy E:\WorkProjects\Shaders\Build\ShadowMappingd.exe E:\WorkProjects\Shaders\ShadowMappingd.exe
+         copy I:\WorkSpace\Shaders\Build\ShadowMappingd.exe I:\WorkSpace\Shaders\ShadowMappingd.exe
          :VCEnd
          已复制         1 个文件。
-     1>已完成生成项目“E:\WorkProjects\Shaders\ShadowMapping\ShadowMapping.vcxproj”(Rebuild 个目标)的操作。
+     1>Done Building Project "I:\WorkSpace\Shaders\ShadowMapping\ShadowMapping.vcxproj" (Build target(s)).
 
-生成成功。
+Build succeeded.
 
-已用时间 00:00:19.64
+Time Elapsed 00:00:03.65

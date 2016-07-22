@@ -1,14 +1,9 @@
 
-varying vec2 Texcoord;
-varying vec3 LightDir;
-varying vec3 SightLineDir;
-varying vec3 Normal;
+uniform sampler2D sampler0;
+uniform sampler2DShadow sampler8;
 
-void main( void )
+void main(void)
 {
-	vec3 vLightDir = normalize(LightDir);
-	vec3 vNormal = normalize(Normal);
-  
-	gl_FragColor = texture2D( sampler0, Texcoord );
-       
+	vec4 color = gl_Color * texture2D( sampler0, gl_TexCoord[0].xy );
+	gl_FragColor = color * (0.1 + shadow2DProj( sampler8,gl_TexCoord[3] ) * 0.1);
 }

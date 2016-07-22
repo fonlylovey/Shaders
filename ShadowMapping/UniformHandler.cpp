@@ -5,7 +5,6 @@
 UniformHandler::UniformHandler(osg::StateSet* stateSet)
 {
 	m_pStateSet = stateSet;
-	m_pStateSet = NULL;
 	m_pTexture = nullptr;
 	m_pLightCamera = nullptr;
 }
@@ -27,8 +26,7 @@ bool UniformHandler::handle(const osgGA::GUIEventAdapter & ea, osgGA::GUIActionA
 		if (m_pLightCamera != nullptr)
 		{
 			m_pLightCamera->attach(osg::Camera::DEPTH_BUFFER, m_pTexture);
-			osg::Image *image = new osg::Image(*m_pTexture->getImage(0), osg::CopyOp::DEEP_COPY_IMAGES);
-			osgDB::writeImageFile(*image, "depth.jpg");
+			osgDB::writeImageFile(*m_pTexture->getImage(0), "depth.jpg");
 		}
 		return false;
 	}
