@@ -18,12 +18,6 @@ void GeometryFloor::createFloor()
 	osg::Geometry* plane = createPlane(50, 50);
 	addDrawable(plane);
 
-	osg::ref_ptr<osg::Material> plane_material = new osg::Material;
-	plane_material->setAmbient(osg::Material::FRONT_AND_BACK,osg::Vec4(0.6f,0.6f,1,1.0f));
-	plane_material->setSpecular(osg::Material::FRONT_AND_BACK, osg::Vec4(0.6f, 0.6f, 1, 1.0f));
-	plane_material->setDiffuse(osg::Material::FRONT_AND_BACK, osg::Vec4(0.6f, 0.6f, 1, 1.0f));
-	plane->getOrCreateStateSet()->setAttributeAndModes(plane_material,osg::StateAttribute::OVERRIDE | osg::StateAttribute::ON);  
-
 	plane->getOrCreateStateSet()->setMode(GL_LIGHTING,osg::StateAttribute::OFF);
 	
 	//…Ë÷√øÃœﬂ‰÷»æ◊¥Ã¨
@@ -50,7 +44,8 @@ osg::Geometry*  GeometryFloor::createPlane(size_t lenght, size_t width)
 		osg::ref_ptr<osg::Vec3Array> vertices = new osg::Vec3Array;
 		osg::ref_ptr<osg::Vec3Array> normals = new osg::Vec3Array;
 		osg::ref_ptr<osg::Vec4Array> colors = new osg::Vec4Array;
-
+		colors->push_back(osg::Vec4(1, 1, 1, 1.0));
+		geom->setColorArray(colors, osg::Array::BIND_OVERALL);
 		for (size_t row = 0; row < lenght - 1; row++)
 		{
 			for (size_t col = 0; col < width - 1; col++)

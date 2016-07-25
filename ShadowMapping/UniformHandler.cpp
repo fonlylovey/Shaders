@@ -25,8 +25,9 @@ bool UniformHandler::handle(const osgGA::GUIEventAdapter & ea, osgGA::GUIActionA
 	{
 		if (m_pLightCamera != nullptr)
 		{
-			m_pLightCamera->attach(osg::Camera::DEPTH_BUFFER, m_pTexture);
-			osgDB::writeImageFile(*m_pTexture->getImage(0), "depth.jpg");
+			//m_pLightCamera->attach(osg::Camera::DEPTH_BUFFER, m_pTexture);
+			//m_pHUDCamera->setTexture(m_pTexture);
+			//osgDB::writeImageFile(*m_pTexture->getImage(0), "Debug/depth.jpg");
 		}
 		return false;
 	}
@@ -47,4 +48,10 @@ void UniformHandler::setLightCamera(osg::Camera* camera)
 void UniformHandler::setTexture(osg::Texture2D* texture)
 {
 	m_pTexture = texture;
+}
+
+
+void UniformHandler::setHUD(HUDCamera* camera)
+{
+	m_pHUDCamera = camera;
 }
