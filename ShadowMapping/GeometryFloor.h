@@ -10,6 +10,8 @@ public:
 	GeometryFloor(void);
 	virtual ~GeometryFloor(void);
 
+	void setTexture(std::string image);
+
 private:
 	void createFloor();
 

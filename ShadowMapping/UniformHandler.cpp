@@ -5,7 +5,6 @@
 UniformHandler::UniformHandler(osg::StateSet* stateSet)
 {
 	m_pStateSet = stateSet;
-	m_pTexture = nullptr;
 	m_pLightCamera = nullptr;
 }
 
@@ -25,9 +24,12 @@ bool UniformHandler::handle(const osgGA::GUIEventAdapter & ea, osgGA::GUIActionA
 	{
 		if (m_pLightCamera != nullptr)
 		{
-			//m_pLightCamera->attach(osg::Camera::DEPTH_BUFFER, m_pTexture);
-			//m_pHUDCamera->setTexture(m_pTexture);
-			//osgDB::writeImageFile(*m_pTexture->getImage(0), "Debug/depth.jpg");
+			osg::Vec3d mEyes, mCenter, mUp;
+			m_pLightCamera->getViewMatrixAsLookAt(mEyes, mCenter, mUp);
+// 			osg::Vec3 theUp = mCenter - m_lightPos;
+// 			theUp = theUp ^ osg::Y_AXIS;
+// 			theUp.normalize();
+			//m_pLightCamera->setViewMatrixAsLookAt(m_lightPos, mCenter, mUp);
 		}
 		return false;
 	}
@@ -42,16 +44,4 @@ void UniformHandler::setLightPos(osg::Vec3 lPos)
 void UniformHandler::setLightCamera(osg::Camera* camera)
 {
 	m_pLightCamera = camera;
-}
-
-
-void UniformHandler::setTexture(osg::Texture2D* texture)
-{
-	m_pTexture = texture;
-}
-
-
-void UniformHandler::setHUD(HUDCamera* camera)
-{
-	m_pHUDCamera = camera;
 }

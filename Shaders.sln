@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShadowMapping", "ShadowMapp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DepthMap", "DepthMap\DepthMap.vcxproj", "{D22DD674-D364-4901-BFB9-ED79DB763E38}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLSLShadowMapping", "GLSLShadowMapping\GLSLShadowMapping.vcxproj", "{C6AB1C21-46AF-4AF2-A37C-FA4E31C71FD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{D22DD674-D364-4901-BFB9-ED79DB763E38}.Debug|Win32.Build.0 = Debug|Win32
 		{D22DD674-D364-4901-BFB9-ED79DB763E38}.Release|Win32.ActiveCfg = Release|Win32
 		{D22DD674-D364-4901-BFB9-ED79DB763E38}.Release|Win32.Build.0 = Release|Win32
+		{C6AB1C21-46AF-4AF2-A37C-FA4E31C71FD1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6AB1C21-46AF-4AF2-A37C-FA4E31C71FD1}.Debug|Win32.Build.0 = Debug|Win32
+		{C6AB1C21-46AF-4AF2-A37C-FA4E31C71FD1}.Release|Win32.ActiveCfg = Release|Win32
+		{C6AB1C21-46AF-4AF2-A37C-FA4E31C71FD1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

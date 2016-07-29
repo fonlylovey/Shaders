@@ -1,16 +1,10 @@
-﻿Build started 2016/7/25 17:41:38.
-     1>Project "I:\WorkSpace\Shaders\BlinnPhong\BlinnPhong.vcxproj" on node 2 (Build target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (I:\WorkSpace\Shaders\Build\) contains files shared from another project (BumpMapping.vcxproj, ShadowMapping.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(BlinnPhong) does not match the Linker's OutputFile property value (BlinnPhongd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-     1>Link:
-         I:\Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\WorkSpace\Shaders\Build\BlinnPhongd.exe" /INCREMENTAL /NOLOGO MSVCRTD.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\WorkSpace\Shaders\Build\BlinnPhong.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\WorkSpace\Shaders\Build\BlinnPhong.lib" /MACHINE:X86 I:\WorkSpace\Shaders\Build\Source.obj
-     1>Source.obj : error LNK2019: unresolved external symbol "public: __thiscall GeometryFloor::GeometryFloor(void)" (??0GeometryFloor@@QAE@XZ) referenced in function _main
-     1>Source.obj : error LNK2019: unresolved external symbol "public: __thiscall HUDCamera::HUDCamera(double,double,double,double)" (??0HUDCamera@@QAE@NNNN@Z) referenced in function _main
-     1>Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall HUDCamera::setTexture(class osg::Texture2D *)" (?setTexture@HUDCamera@@QAEXPAVTexture2D@osg@@@Z) referenced in function _main
-     1>I:\WorkSpace\Shaders\Build\BlinnPhongd.exe : fatal error LNK1120: 3 unresolved externals
-     1>Done Building Project "I:\WorkSpace\Shaders\BlinnPhong\BlinnPhong.vcxproj" (Build target(s)) -- FAILED.
-
-Build FAILED.
-
-Time Elapsed 00:00:00.20
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (I:\WorkSpace\Shaders\Build\) contains files shared from another project (BumpMapping.vcxproj, ShadowMapping.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(BlinnPhong) does not match the Linker's OutputFile property value (BlinnPhongd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall GeometryFloor::GeometryFloor(void)" (??0GeometryFloor@@QAE@XZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall HUDCamera::HUDCamera(double,double,double,double)" (??0HUDCamera@@QAE@NNNN@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall HUDCamera::setTexture(class osg::Texture2D *)" (?setTexture@HUDCamera@@QAEXPAVTexture2D@osg@@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall UniformHandler::UniformHandler(class osg::StateSet *)" (??0UniformHandler@@QAE@PAVStateSet@osg@@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall UniformHandler::setTexture(class osg::Texture2D *)" (?setTexture@UniformHandler@@QAEXPAVTexture2D@osg@@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall UniformHandler::setLightCamera(class osg::Camera *)" (?setLightCamera@UniformHandler@@QAEXPAVCamera@osg@@@Z) referenced in function _main
+I:\WorkSpace\Shaders\Build\BlinnPhongd.exe : fatal error LNK1120: 6 unresolved externals

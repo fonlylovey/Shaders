@@ -75,14 +75,12 @@ void main()
 		osg::Uniform* ltDiffus = new osg::Uniform("ltDiffus", diffus);
 		osg::Uniform* ltAmbient = new osg::Uniform("ltAmbient", ambient);
 		osg::Uniform* ltSpecular = new osg::Uniform("ltSpecular", specular);
-		osg::Uniform* sampler0 = new osg::Uniform("sampler0", 0);
 		stateSet->addUniform(ltPos);
 		stateSet->addUniform(eyePos);
 		stateSet->addUniform(ltDiffus);
 		stateSet->addUniform(ltAmbient);
 		stateSet->addUniform(ltSpecular);
 		stateSet->addUniform(ltIntensity);
-		stateSet->addUniform(sampler0);
 		stateSet->setAttributeAndModes(profram);
 		UniformHandler* handler = new UniformHandler(stateSet);
 		viewer->addEventHandler(handler);

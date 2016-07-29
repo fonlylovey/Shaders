@@ -3,12 +3,15 @@
 #include <osg/Geometry>
 #include <osgText/Text>
 #include <osgViewer/GraphicsWindow>
+#include <windows.h>
+#include <gl/GL.h>
 
 HUDCamera::HUDCamera()
 {
 	m_pTexture = NULL;
 	m_pGeode = new osg::Geode;
 	addChild(m_pGeode);
+
 }
 
 HUDCamera::HUDCamera(double left, double right, double bottom, double top)
@@ -34,16 +37,17 @@ void HUDCamera::init()
 	setClearColor(osg::Vec4(0.2f, 0.2f, 0.4f, 0.5f));
 	setRenderOrder(osg::Camera::POST_RENDER);
 	setAllowEventFocus(false);
-	getOrCreateStateSet()->setMode(GL_BLEND, osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);
+	getOrCreateStateSet()->setMode(GL_BLEND, osg::StateAttribute::OFF | osg::StateAttribute::OVERRIDE);
 	getOrCreateStateSet()->setMode(GL_LIGHTING, osg::StateAttribute::OFF | 
-		osg::StateAttribute::OVERRIDE);
+		osg::StateAttribute::PROTECTED);
 }
 
 void HUDCamera::setTexture(osg::Texture2D* texture)
 {
 	m_pTexture = texture;
-	m_pGeode->getOrCreateStateSet()->setTextureAttributeAndModes(0, m_pTexture);
 	createQuad();
+	m_pGeode->getOrCreateStateSet()->setTextureAttributeAndModes(0, m_pTexture);
+	
 }
 
 void HUDCamera::createQuad()
@@ -80,6 +84,32 @@ void HUDCamera::createQuad()
 	osg::StateSet* stateset = m_pGeode->getOrCreateStateSet();
 	stateset->setMode(GL_BLEND, osg::StateAttribute::ON);
 	stateset->setRenderingHint(osg::StateSet::TRANSPARENT_BIN);
+	geom->setDrawCallback(new TexCallBack(m_pTexture.get()));
 	m_pGeode->addDrawable(geom);
 }
 
+TexCallBack::TexCallBack(osg::Texture2D * texture, unsigned stage /*= 0*/)
+	: _texture(texture), _stage(stage)
+{
+
+}
+
+void TexCallBack::drawImplementation(osg::RenderInfo & ri, const osg::Drawable* drawable) const
+{
+	if (_texture.valid()) {
+		// make sure proper texture is currently applied
+		ri.getState()->applyTextureAttribute(_stage, _texture.get());
+
+		// Turn off depth comparison mode
+ 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE_ARB,
+ 			GL_NONE);
+	}
+
+	drawable->drawImplementation(ri);
+
+	if (_texture.valid()) {
+		// Turn it back on
+ 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE_ARB,
+ 			GL_COMPARE_R_TO_TEXTURE_ARB);
+	}
+}
