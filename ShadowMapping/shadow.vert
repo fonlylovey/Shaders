@@ -1,12 +1,17 @@
 
 varying vec2 Texcoord;
 varying vec4 ShadowCoord;
-varying vec4 vertColor;
 uniform mat4 ShadowVP;
-void main( void )
+uniform mat4 osg_ViewMatrixInverse;
+
+void main( )
 {
-	gl_Position = ftransform();
-	vertColor = gl_Color;
+	mat4 modelMatrix =  osg_ViewMatrixInverse * gl_ModelViewMatrix;
+	vec4 posWorld = modelMatrix * gl_Vertex;
+
+	ShadowCoord = gl_TextureMatrix[4] * posWorld;
 	Texcoord = gl_MultiTexCoord0.xy;
-	ShadowCoord = ShadowVP * gl_Vertex;
+
+	gl_Position = ftransform();
+	gl_FrontColor = gl_Color;
 }

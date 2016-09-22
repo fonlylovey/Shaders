@@ -6,20 +6,6 @@
 #include <osg/Geode>
 #include <osg/Texture2D>
 
-class TexCallBack : public osg::Drawable::DrawCallback
-{
-public:
-	TexCallBack(osg::Texture2D * texture, unsigned stage = 0);
-	~TexCallBack(){};
-
-	virtual void drawImplementation
-		(osg::RenderInfo & ri, const osg::Drawable* drawable) const;
-
-private:
-	osg::ref_ptr< osg::Texture2D > _texture;
-	unsigned                       _stage;
-};
-
 class HUDCamera : public osg::Camera
 {
 public:

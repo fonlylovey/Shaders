@@ -1,6 +1,23 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (I:\WorkSpace\Shaders\Build\) contains files shared from another project (BlinnPhong.vcxproj, BumpMapping.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Source.cpp
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(ShadowMapping) does not match the Linker's OutputFile property value (ShadowMappingd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-  ShadowMapping.vcxproj -> I:\WorkSpace\Shaders\Build\ShadowMappingd.exe
-  已复制         1 个文件。
+﻿生成启动时间为 2016/9/22 12:32:56。
+     1>项目“I:\WorkSpace\Shaders\ShadowMapping\ShadowMapping.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (I:\WorkSpace\Shaders\Build\) contains files shared from another project (BlinnPhong.vcxproj, BumpMapping.vcxproj, Shadow.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         I:\Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"I:\WorkSpace\Shaders\Build\\" /Fd"I:\WorkSpace\Shaders\Build\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1194,5): warning MSB8012: TargetExt(d.exe) does not match the Linker's OutputFile property value (.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(ShadowMapping) does not match the Linker's OutputFile property value (ShadowMappingd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         I:\Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\WorkSpace\Shaders\Build\ShadowMappingd.exe" /INCREMENTAL /NOLOGO opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\WorkSpace\Shaders\Build\ShadowMapping.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\WorkSpace\Shaders\Build\ShadowMapping.lib" /MACHINE:X86 I:\WorkSpace\Shaders\Build\DepthMap.obj
+         I:\WorkSpace\Shaders\Build\GeometryFloor.obj
+         I:\WorkSpace\Shaders\Build\HUDCamera.obj
+         I:\WorkSpace\Shaders\Build\Source.obj
+         ShadowMapping.vcxproj -> I:\WorkSpace\Shaders\Build\ShadowMappingd.exe
+       PostBuildEvent:
+         copy I:\WorkSpace\Shaders\Build\ShadowMappingd.exe I:\WorkSpace\Shaders\Win32\ShadowMappingd.exe
+         :VCEnd
+         已复制         1 个文件。
+     1>已完成生成项目“I:\WorkSpace\Shaders\ShadowMapping\ShadowMapping.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.77

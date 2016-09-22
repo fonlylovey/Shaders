@@ -99,13 +99,11 @@
     <ClCompile Include="GeometryFloor.cpp" />
     <ClCompile Include="HUDCamera.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="UniformHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DepthMap.h" />
     <ClInclude Include="GeometryFloor.h" />
     <ClInclude Include="HUDCamera.h" />
-    <ClInclude Include="UniformHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shadow.frag" />

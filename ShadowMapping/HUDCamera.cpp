@@ -70,7 +70,7 @@ void HUDCamera::createQuad()
 
 	osg::Vec4Array* colors = new osg::Vec4Array;
 	colors->push_back(osg::Vec4(1.0, 1.0, 0.0, 1.0));
-	//geom->setColorArray(colors, osg::Array::BIND_OVERALL);
+	geom->setColorArray(colors, osg::Array::BIND_OVERALL);
 
 	osg::Vec2Array* texcoord = new osg::Vec2Array;
 	texcoord->push_back(osg::Vec2(0.0, 0.0));
@@ -84,32 +84,6 @@ void HUDCamera::createQuad()
 	osg::StateSet* stateset = m_pGeode->getOrCreateStateSet();
 	stateset->setMode(GL_BLEND, osg::StateAttribute::ON);
 	stateset->setRenderingHint(osg::StateSet::TRANSPARENT_BIN);
-	geom->setDrawCallback(new TexCallBack(m_pTexture.get()));
 	m_pGeode->addDrawable(geom);
 }
 
-TexCallBack::TexCallBack(osg::Texture2D * texture, unsigned stage /*= 0*/)
-	: _texture(texture), _stage(stage)
-{
-
-}
-
-void TexCallBack::drawImplementation(osg::RenderInfo & ri, const osg::Drawable* drawable) const
-{
-	if (_texture.valid()) {
-		// make sure proper texture is currently applied
-		ri.getState()->applyTextureAttribute(_stage, _texture.get());
-
-		// Turn off depth comparison mode
- 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE_ARB,
- 			GL_NONE);
-	}
-
-	drawable->drawImplementation(ri);
-
-	if (_texture.valid()) {
-		// Turn it back on
- 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE_ARB,
- 			GL_COMPARE_R_TO_TEXTURE_ARB);
-	}
-}

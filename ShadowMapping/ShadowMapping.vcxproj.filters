@@ -21,9 +21,6 @@
     <ClCompile Include="GeometryFloor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="UniformHandler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="HUDCamera.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -35,9 +32,6 @@
     <ClInclude Include="GeometryFloor.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="UniformHandler.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="HUDCamera.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -47,10 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="shadow.frag">
-      <Filter>头文件</Filter>
+      <Filter>资源文件</Filter>
     </None>
     <None Include="shadow.vert">
-      <Filter>头文件</Filter>
+      <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
 </Project>
